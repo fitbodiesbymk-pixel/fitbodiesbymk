@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fitbodies by MK — online fitness coaching and nutrition for men and women over 35. Eat Better. Move More. Live Your Best. Book your free discovery call today." />
+  <title>Fitbodies by MK | Online Fitness Coaching for the Over 35s</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .font-heading { font-family: 'Oswald', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-[#0D1B2E] shadow-lg">
+    <nav class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#" class="text-white text-2xl font-heading font-bold tracking-wide">Fitbodies by MK</a>
+      <ul class="hidden md:flex items-center gap-8 text-white font-medium">
+        <li><a href="#about" class="hover:text-[#2B8FD0] transition-colors">About</a></li>
+        <li><a href="#services" class="hover:text-[#2B8FD0] transition-colors">Programmes</a></li>
+        <li><a href="#contact" class="hover:text-[#2B8FD0] transition-colors">Contact</a></li>
+        <li>
+          <a href="https://calendly.com/fitbodiesbymk/discovery-call" target="_blank" rel="noopener"
+             class="bg-[#2B8FD0] text-white px-5 py-2 rounded font-heading font-semibold hover:bg-blue-600 transition-colors">
+            Book a call
+          </a>
+        </li>
+      </ul>
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none" aria-label="Toggle navigation menu">
+        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0D1B2E] border-t border-white/10 px-4 pb-5">
+      <ul class="flex flex-col gap-5 text-white font-medium pt-5">
+        <li><a href="#about" class="hover:text-[#2B8FD0] transition-colors">About</a></li>
+        <li><a href="#services" class="hover:text-[#2B8FD0] transition-colors">Programmes</a></li>
+        <li><a href="#contact" class="hover:text-[#2B8FD0] transition-colors">Contact</a></li>
+        <li>
+          <a href="https://calendly.com/fitbodiesbymk/discovery-call" target="_blank" rel="noopener"
+             class="inline-block bg-[#2B8FD0] text-white px-5 py-2 rounded font-heading font-semibold hover:bg-blue-600 transition-colors">
+            Book a call
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="bg-[#0D1B2E] py-20 px-4">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12">
+        <div class="flex-1 text-center md:text-left">
+          <p class="text-[#2B8FD0] font-heading font-semibold uppercase tracking-widest text-sm mb-4">Fitness Coaching</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight mb-5">
+            Personalised guidance for a better, healthier body that lasts.
+          </h1>
+          <p class="text-lg text-gray-300 mb-8 max-w-lg mx-auto md:mx-0">
+            Personalised nutrition and wellness coaching built around your life, your goals, and the body you have right now.
+          </p>
+          <a href="https://calendly.com/fitbodiesbymk/discovery-call" target="_blank" rel="noopener"
+             class="inline-block bg-[#2B8FD0] text-white px-8 py-4 text-lg font-heading font-semibold rounded hover:bg-blue-600 transition-colors">
+            Book Your Free Discovery Call
+          </a>
+          <p class="text-gray-500 text-sm mt-3">Free 30-minute call. No obligation.</p>
+        </div>
+        <div class="flex-1 w-full">
+          <img src="character.png" alt="Fitbodies by MK — online fitness coaching for the over 35s" class="rounded-lg w-full max-w-xs mx-auto" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="bg-gray-50 py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-heading font-bold text-[#0D1B2E] text-center mb-2">Real people. Real comebacks.</h2>
+        <p class="text-center text-gray-500 mb-10">No crash diets. No punishing workouts. Just sustainable results.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white border-l-4 border-[#2B8FD0] p-7 rounded shadow-sm">
+            <p class="text-gray-700 italic mb-5">"I'd been telling myself I'd get back into shape for three years. Eight weeks with MK and I'm down 9kg, sleeping better, and actually enjoying my food again."</p>
+            <p class="font-heading font-semibold text-[#0D1B2E]">— Nomsa, 41, Johannesburg</p>
+          </div>
+          <div class="bg-white border-l-4 border-[#2B8FD0] p-7 rounded shadow-sm">
+            <p class="text-gray-700 italic mb-5">"Between work and the kids I had zero time. MK built me a plan that actually fits my week. Lost 7kg in 6 weeks and I've kept it off for 4 months."</p>
+            <p class="font-heading font-semibold text-[#0D1B2E]">— Craig, 44, Cape Town</p>
+          </div>
+          <div class="bg-white border-l-4 border-[#2B8FD0] p-7 rounded shadow-sm">
+            <p class="text-gray-700 italic mb-5">"I didn't want another generic plan. MK took the time to understand my lifestyle and built something I could actually stick to. Best shape I've been in since my 20s."</p>
+            <p class="font-heading font-semibold text-[#0D1B2E]">— Adaeze, 38, Durban</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="bg-white py-16 px-4">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-heading font-bold text-[#0D1B2E] text-center mb-3">How we work together</h2>
+        <p class="text-center text-gray-500 mb-10 max-w-xl mx-auto">Two ways to get started — both built around eating better, moving more, and living your best.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Card 1 -->
+          <div class="bg-[#0D1B2E] text-white rounded-lg p-8 flex flex-col">
+            <p class="text-[#2B8FD0] font-heading font-semibold uppercase tracking-widest text-xs mb-3">Ongoing Coaching</p>
+            <h3 class="text-2xl font-heading font-bold text-white mb-3">Online Fitness Coaching</h3>
+            <p class="text-gray-300 flex-1 mb-6">Personalised coaching that covers training, nutrition, and wellness — all managed remotely around your schedule. MK gets to know your goals, your body, and your life, then builds a plan that actually works for you. Adjusted every week based on your progress.</p>
+            <ul class="space-y-2 mb-6 text-gray-300 text-sm">
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-[#2B8FD0] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                Personalised training and nutrition plan
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-[#2B8FD0] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                Weekly check-ins and programme adjustments
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-[#2B8FD0] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                100% online — train from anywhere
+              </li>
+            </ul>
+            <a href="https://calendly.com/fitbodiesbymk/discovery-call" target="_blank" rel="noopener" class="text-[#2B8FD0] font-heading font-semibold hover:underline mb-3 block">Book a discovery call →</a>
+            <!-- Update href below with your Skool link -->
+            <a href="#" class="inline-block bg-[#2B8FD0] text-white text-center px-5 py-2 rounded font-heading font-semibold hover:bg-blue-600 transition-colors">Get Started on Skool</a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-[#0D1B2E] text-white rounded-lg p-8 flex flex-col">
+            <p class="text-[#2B8FD0] font-heading font-semibold uppercase tracking-widest text-xs mb-3">6-Week Programme</p>
+            <h3 class="text-2xl font-heading font-bold text-white mb-3">Comeback Strong</h3>
+            <p class="text-gray-300 flex-1 mb-6">A focused 6-week programme designed for the over 35s who want to get back into shape without overhauling their entire life. Build a sustainable nutrition plan, establish a training routine that fits your schedule, and finish feeling strong, energised, and in control.</p>
+            <ul class="space-y-2 mb-6 text-gray-300 text-sm">
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-[#2B8FD0] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                Structured 6-week training and nutrition plan
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-[#2B8FD0] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                Built for real life — no extreme diets or hours in the gym
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-[#2B8FD0] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                Accountability and support throughout
+              </li>
+            </ul>
+            <a href="https://calendly.com/fitbodiesbymk/discovery-call" target="_blank" rel="noopener" class="text-[#2B8FD0] font-heading font-semibold hover:underline mb-3 block">Book a discovery call →</a>
+            <!-- Update href below with your Skool link -->
+            <a href="#" class="inline-block bg-[#2B8FD0] text-white text-center px-5 py-2 rounded font-heading font-semibold hover:bg-blue-600 transition-colors">Get Started on Skool</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-[#0D1B2E] text-white rounded-lg p-8 flex flex-col">
+            <p class="text-[#2B8FD0] font-heading font-semibold uppercase tracking-widest text-xs mb-3">In Person</p>
+            <h3 class="text-2xl font-heading font-bold text-white mb-3">Personal Training</h3>
+            <p class="text-gray-300 flex-1 mb-6">Face-to-face personal training sessions tailored to your goals, your fitness level, and your body. MK coaches you through every session — correct form, progressive programming, and the accountability that comes from having someone in your corner in person.</p>
+            <ul class="space-y-2 mb-6 text-gray-300 text-sm">
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-[#2B8FD0] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                1-on-1 sessions focused on your goals
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-[#2B8FD0] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                Proper form, technique, and injury prevention
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-[#2B8FD0] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                Progressive programming that evolves with you
+              </li>
+            </ul>
+            <a href="https://calendly.com/fitbodiesbymk/discovery-call" target="_blank" rel="noopener" class="text-[#2B8FD0] font-heading font-semibold hover:underline mb-3 block">Book a discovery call →</a>
+            <!-- Update href below with your Skool link -->
+            <a href="#" class="inline-block bg-[#2B8FD0] text-white text-center px-5 py-2 rounded font-heading font-semibold hover:bg-blue-600 transition-colors">Get Started on Skool</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY MK -->
+    <section id="about" class="bg-[#0D1B2E] py-16 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-heading font-bold text-white text-center mb-10">Why Fitbodies by MK</h2>
+        <ul class="space-y-8">
+          <li class="flex items-start gap-5">
+            <span class="mt-1 flex-shrink-0 w-7 h-7 bg-[#2B8FD0] rounded-full flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <p class="text-white text-lg leading-relaxed">
+              <span class="font-heading font-semibold text-[#2B8FD0]">Built for the over-35s — not a generic fitness plan.</span>
+              Every programme accounts for real life: a demanding job, a family, and a body that needs smarter training and recovery — not just more of it.
+            </p>
+          </li>
+          <li class="flex items-start gap-5">
+            <span class="mt-1 flex-shrink-0 w-7 h-7 bg-[#2B8FD0] rounded-full flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <p class="text-white text-lg leading-relaxed">
+              <span class="font-heading font-semibold text-[#2B8FD0]">Nutrition and wellness first — sustainable results, not quick fixes.</span>
+              Lasting fat loss and real energy come from eating better, not less. MK builds nutrition plans that fit your food, your culture, and your schedule.
+            </p>
+          </li>
+          <li class="flex items-start gap-5">
+            <span class="mt-1 flex-shrink-0 w-7 h-7 bg-[#2B8FD0] rounded-full flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <p class="text-white text-lg leading-relaxed">
+              <span class="font-heading font-semibold text-[#2B8FD0]">No one-size-fits-all — your plan is built around you.</span>
+              Your goals, your starting point, your lifestyle. Every programme starts with understanding who you are, not slotting you into a template.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section id="contact" class="bg-[#2B8FD0] py-16 px-4 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
+          Ready to come back stronger?
+        </h2>
+        <p class="text-white/90 text-lg mb-8">
+          Book a free 30-minute discovery call with MK. No pressure, no hard sell — just an honest conversation about your goals and the best way to reach them.
+        </p>
+        <a href="https://calendly.com/fitbodiesbymk/discovery-call" target="_blank" rel="noopener"
+           class="inline-block bg-[#0D1B2E] text-white px-8 py-4 text-lg font-heading font-semibold rounded hover:opacity-90 transition-opacity">
+          Book your free discovery call
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0D1B2E] py-10 px-4 text-center">
+    <p class="text-white text-xl font-heading font-bold mb-1">Fitbodies by MK</p>
+    <p class="text-gray-400 text-sm mb-4">Eat Better. Move More. Live Your Best.</p>
+    <a href="https://calendly.com/fitbodiesbymk/discovery-call" target="_blank" rel="noopener"
+       class="text-[#2B8FD0] hover:underline text-sm">Book a free discovery call</a>
+    <p class="text-gray-600 text-xs mt-6">&copy; 2025 Fitbodies by MK. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+
+    menuToggle.addEventListener('click', function () {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden', isOpen);
+      iconOpen.classList.toggle('hidden', !isOpen);
+      iconClose.classList.toggle('hidden', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      });
+    });
+  </script>
+
+</body>
+</html>
