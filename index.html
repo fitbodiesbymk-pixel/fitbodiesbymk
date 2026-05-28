@@ -80,9 +80,9 @@
       margin: 0 auto;
       padding: 4rem 1.5rem 3rem;
       gap: 3rem;
-      align-items: center;
+      align-items: start;
     }
-    .hero-text { display: flex; flex-direction: column; gap: 1.5rem; }
+    .hero-text { display: flex; flex-direction: column; gap: 1.5rem; justify-content: center; }
     .hero-badges { display: flex; gap: 0.6rem; flex-wrap: wrap; }
     .badge {
       display: inline-flex; align-items: center; gap: 0.4rem;
@@ -111,7 +111,7 @@
       color: rgba(255,255,255,0.72);
       max-width: 480px;
     }
-    .hero-actions { display: flex; flex-direction: column; gap: 0.75rem; }
+    .hero-actions { display: flex; flex-direction: row; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
     .btn-wa {
       display: inline-flex; align-items: center; gap: 0.6rem;
       background: #25D366; color: var(--white);
@@ -123,13 +123,14 @@
     .btn-wa:hover { background: #1aab52; transform: translateY(-1px); }
     .btn-wa svg { width: 20px; height: 20px; flex-shrink: 0; }
     .btn-ghost {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      color: rgba(255,255,255,0.7); font-size: 0.95rem; font-weight: 500;
-      border-bottom: 1px solid rgba(255,255,255,0.25);
-      padding-bottom: 1px; width: fit-content;
-      transition: color 0.2s, border-color 0.2s;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: rgba(255,255,255,0.85); font-size: 1.05rem; font-weight: 600;
+      font-family: 'Oswald', sans-serif; letter-spacing: 0.04em;
+      border: 2px solid rgba(255,255,255,0.35);
+      padding: 0.85rem 1.6rem; border-radius: 8px;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
     }
-    .btn-ghost:hover { color: var(--white); border-color: rgba(255,255,255,0.6); }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.75); color: var(--white); background: rgba(255,255,255,0.06); }
     .hero-img-wrap {
       position: relative;
       border-radius: 12px; overflow: hidden;
@@ -416,6 +417,8 @@
       .hero-img-wrap { height: 340px; order: -1; }
       .hero h1 { font-size: 2.2rem; }
       .hero-sub { font-size: 0.97rem; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .btn-ghost { justify-content: center; }
       .stats-inner { grid-template-columns: repeat(2, 1fr); }
       .method-grid { grid-template-columns: 1fr; }
       .hiw-steps { grid-template-columns: 1fr; }
