@@ -356,16 +356,15 @@
     .about-content { display: flex; flex-direction: column; gap: 1.5rem; }
     .about-content h2 { font-size: clamp(2.2rem, 3.5vw, 3rem); font-weight: 700; color: var(--navy); line-height: 1.1; }
     .about-content p { font-size: 1.05rem; line-height: 1.85; color: var(--text-light); }
-    .cert-badges { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem; }
+    .cert-badges { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; }
     .cert-badge {
       display: flex; flex-direction: column; align-items: center;
-      border-radius: 12px; padding: 1.25rem 1.5rem;
-      min-width: 150px; text-align: center;
+      background: var(--white); border: 1px solid rgba(43,143,208,0.2);
+      border-radius: 12px; padding: 1.1rem 1.25rem;
+      min-width: 130px; text-align: center;
     }
-    .cert-badge.pn  { background: #0a1f3d; border: 1px solid rgba(0,180,210,0.3); }
-    .cert-badge.cfsc { background: #1a0a0a; border: 1px solid rgba(200,30,30,0.35); }
-    .cert-badge img { height: 90px; width: auto; object-fit: contain; margin-bottom: 0.65rem; }
-    .cert-badge .cert-sub { font-size: 0.72rem; color: rgba(255,255,255,0.55); line-height: 1.4; }
+    .cert-badge img { height: 72px; width: auto; object-fit: contain; margin-bottom: 0.6rem; }
+    .cert-badge .cert-sub { font-size: 0.72rem; color: var(--text-light); line-height: 1.4; }
 
     /* FAQ */
     .faq-section { background: var(--navy); }
@@ -726,11 +725,11 @@
         <p>My experience spans body transformation, functional strength, and precision nutrition. I understand what it actually takes to change a body — and what it takes to keep those changes for life. That means sustainable habits, not extreme programmes that fall apart after six weeks.</p>
         <p>I work with clients over 40 because this is the stage where the right approach matters most. The stakes are higher, recovery takes longer, and generic training plans just don't cut it. Every programme I build is designed around your life — your schedule, your history, your goals.</p>
         <div class="cert-badges">
-          <div class="cert-badge pn">
+          <div class="cert-badge">
             <img src="pn.png" alt="Precision Nutrition Level 1 Certified" />
             <span class="cert-sub">Precision Nutrition<br/>Level 1 Certified</span>
           </div>
-          <div class="cert-badge cfsc">
+          <div class="cert-badge">
             <img src="cfsc.png" alt="Certified Functional Strength Coach" />
             <span class="cert-sub">Certified Functional<br/>Strength Coach — MBSC</span>
           </div>
