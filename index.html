@@ -681,6 +681,12 @@
           <li>Phase 2 unlocks after Phase 1</li>
           <li>Access to the Comeback Strong community</li>
         </ul>
+        <div id="launch-countdown" style="display:flex;justify-content:center;gap:8px;margin:16px 0 14px;">
+          <div style="text-align:center;background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.3);border-radius:10px;padding:10px 14px;min-width:56px;"><div id="cd-days" style="font-size:1.4rem;font-weight:800;color:#1C1C2E;line-height:1;">00</div><div style="font-size:.6rem;color:#6B7280;text-transform:uppercase;letter-spacing:.08em;margin-top:4px;">Days</div></div>
+          <div style="text-align:center;background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.3);border-radius:10px;padding:10px 14px;min-width:56px;"><div id="cd-hours" style="font-size:1.4rem;font-weight:800;color:#1C1C2E;line-height:1;">00</div><div style="font-size:.6rem;color:#6B7280;text-transform:uppercase;letter-spacing:.08em;margin-top:4px;">Hrs</div></div>
+          <div style="text-align:center;background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.3);border-radius:10px;padding:10px 14px;min-width:56px;"><div id="cd-mins" style="font-size:1.4rem;font-weight:800;color:#1C1C2E;line-height:1;">00</div><div style="font-size:.6rem;color:#6B7280;text-transform:uppercase;letter-spacing:.08em;margin-top:4px;">Min</div></div>
+          <div style="text-align:center;background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.3);border-radius:10px;padding:10px 14px;min-width:56px;"><div id="cd-secs" style="font-size:1.4rem;font-weight:800;color:#1C1C2E;line-height:1;">00</div><div style="font-size:.6rem;color:#6B7280;text-transform:uppercase;letter-spacing:.08em;margin-top:4px;">Sec</div></div>
+        </div>
         <a href="https://buy.stripe.com/eVqdR846T2f7amo0Aw53O04" target="_blank" rel="noopener" class="btn-wa" style="background:#8B5CF6;border-color:#8B5CF6;">
           Get Instant Access — $67
         </a>
@@ -926,6 +932,21 @@
       }
     });
   });
+
+  (function() {
+    var deadline = new Date('2026-06-07T00:00:00+03:00').getTime();
+    var pad = function(n) { return String(n).padStart(2, '0'); };
+    function tick() {
+      var diff = deadline - Date.now();
+      if (diff <= 0) { clearInterval(timer); return; }
+      document.getElementById('cd-days').textContent  = pad(Math.floor(diff / 86400000));
+      document.getElementById('cd-hours').textContent = pad(Math.floor((diff % 86400000) / 3600000));
+      document.getElementById('cd-mins').textContent  = pad(Math.floor((diff % 3600000) / 60000));
+      document.getElementById('cd-secs').textContent  = pad(Math.floor((diff % 60000) / 1000));
+    }
+    tick();
+    var timer = setInterval(tick, 1000);
+  })();
 </script>
 
 </body>
