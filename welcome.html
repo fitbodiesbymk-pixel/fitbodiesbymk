@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior:smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Fitbodies by MK</title>
+  <meta name="description" content="Welcome to your Fitbodies by MK coaching programme. Everything you need to know to get started." />
+  <!-- No canonical or index — this page is shared directly with new clients, not for search engines -->
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0D1B2E;
+      --mid-navy: #112235;
+      --blue: #2B8FD0;
+      --blue-dark: #1e72aa;
+      --cream: #F9F7F4;
+      --white: #ffffff;
+      --text: #1a1a2e;
+      --text-light: #5a6072;
+      --green: #25D366;
+      --green-dark: #1aab52;
+    }
+    html { font-size: 16px; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); }
+    h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; letter-spacing: 0.02em; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* NAV */
+    .nav-wrap {
+      background: var(--navy);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.35rem; font-weight: 700;
+      color: var(--white); letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--blue); }
+    .nav-note {
+      font-size: 0.82rem; color: rgba(255,255,255,0.45);
+    }
+
+    /* HERO */
+    .welcome-hero {
+      background: var(--navy);
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+    }
+    .welcome-hero-inner { max-width: 680px; margin: 0 auto; }
+    .welcome-tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(37,211,102,0.12);
+      border: 1px solid rgba(37,211,102,0.3);
+      color: #5de89a; font-size: 0.78rem; font-weight: 600;
+      padding: 0.4rem 1rem; border-radius: 20px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .welcome-tag svg { width: 14px; height: 14px; }
+    .welcome-hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      color: var(--white); line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+    .welcome-hero h1 em { font-style: normal; color: var(--blue); }
+    .welcome-hero p {
+      font-size: 1.1rem; line-height: 1.75;
+      color: rgba(255,255,255,0.72);
+      max-width: 540px; margin: 0 auto;
+    }
+
+    /* PERSONAL MESSAGE */
+    .message-section {
+      padding: 4.5rem 1.5rem;
+      background: var(--cream);
+    }
+    .message-inner {
+      max-width: 700px; margin: 0 auto;
+    }
+    .message-card {
+      background: var(--white);
+      border: 1px solid rgba(13,27,46,0.09);
+      border-radius: 12px;
+      padding: 2.5rem;
+    }
+    .message-header {
+      display: flex; align-items: center; gap: 1.25rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(13,27,46,0.09);
+    }
+    .mk-avatar {
+      width: 60px; height: 60px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), #1e72aa);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.4rem; font-weight: 700; color: white;
+    }
+    .mk-info h3 {
+      font-size: 1.1rem; color: var(--navy); margin-bottom: 0.15rem;
+    }
+    .mk-info p {
+      font-size: 0.85rem; color: var(--text-light);
+    }
+    .message-body p {
+      font-size: 1rem; line-height: 1.85;
+      color: var(--text); margin-bottom: 1.1rem;
+    }
+    .message-body p:last-child { margin-bottom: 0; }
+    .message-sign {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(13,27,46,0.09);
+      font-size: 0.95rem; font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* SECTIONS */
+    .section { padding: 4.5rem 1.5rem; }
+    .section.cream { background: var(--cream); }
+    .section-inner { max-width: 960px; margin: 0 auto; }
+    .section-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--blue); text-transform: uppercase; letter-spacing: 0.12em;
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      color: var(--navy); line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+    .section-sub {
+      font-size: 1rem; line-height: 1.7;
+      color: var(--text-light);
+      max-width: 600px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* HOW IT WORKS */
+    .checkin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+    .checkin-card {
+      background: var(--white);
+      border: 1px solid rgba(13,27,46,0.09);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+    .checkin-card.cream { background: var(--cream); }
+    .checkin-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem; font-weight: 700;
+      color: var(--blue); line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+    .checkin-card h3 {
+      font-size: 1.1rem; color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .checkin-card p {
+      font-size: 0.9rem; line-height: 1.7; color: var(--text-light);
+    }
+
+    /* WEEKLY CHECK-IN */
+    .checkin-template {
+      background: var(--navy);
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      margin: 2.5rem 0;
+    }
+    .checkin-template h3 {
+      font-size: 0.82rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.5); margin-bottom: 1.25rem;
+    }
+    .checkin-q {
+      display: flex; gap: 0.75rem;
+      margin-bottom: 0.9rem;
+    }
+    .checkin-q-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.9rem; font-weight: 600;
+      color: var(--blue); flex-shrink: 0; width: 20px;
+    }
+    .checkin-q-text {
+      font-size: 0.95rem; line-height: 1.6;
+      color: rgba(255,255,255,0.82);
+    }
+    .checkin-q-text em {
+      font-style: normal;
+      color: rgba(255,255,255,0.45);
+      font-size: 0.88rem;
+    }
+
+    /* RULES SECTION */
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .rule-card {
+      display: flex; gap: 1rem; align-items: flex-start;
+      background: var(--white);
+      border: 1px solid rgba(13,27,46,0.09);
+      border-radius: 10px;
+      padding: 1.35rem 1.5rem;
+    }
+    .rule-icon {
+      font-size: 1.5rem; flex-shrink: 0; line-height: 1;
+      margin-top: 0.1rem;
+    }
+    .rule-card h3 {
+      font-size: 1rem; color: var(--navy); margin-bottom: 0.3rem;
+    }
+    .rule-card p {
+      font-size: 0.875rem; line-height: 1.65; color: var(--text-light);
+    }
+
+    /* CONTACT */
+    .contact-band {
+      background: var(--navy);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .contact-inner { max-width: 560px; margin: 0 auto; }
+    .contact-inner h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      color: var(--white); margin-bottom: 1rem;
+    }
+    .contact-inner p {
+      font-size: 0.97rem; line-height: 1.75;
+      color: rgba(255,255,255,0.65); margin-bottom: 2rem;
+    }
+    .btn-wa {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: var(--green); color: var(--white);
+      padding: 0.9rem 1.75rem; border-radius: 8px;
+      font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.05rem;
+      letter-spacing: 0.04em;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-wa:hover { background: var(--green-dark); transform: translateY(-1px); }
+    .btn-wa svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .tz-note {
+      font-size: 0.82rem; color: rgba(255,255,255,0.35);
+      margin-top: 1rem;
+    }
+
+    /* FOOTER */
+    footer { background: var(--mid-navy); padding: 2rem 1.5rem; }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-logo {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--white); letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .footer-logo span { color: var(--blue); }
+    .footer-copy { color: rgba(255,255,255,0.35); font-size: 0.82rem; }
+    .footer-links {
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.45); font-size: 0.82rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+
+    @media (max-width: 640px) {
+      .message-card { padding: 1.75rem; }
+      .checkin-template { padding: 1.5rem; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo">Fitbodies <span>by MK</span></div>
+    <div class="nav-note">Welcome Package · Confidential</div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="welcome-hero">
+  <div class="welcome-hero-inner">
+    <div class="welcome-tag">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      You're in
+    </div>
+    <h1>Welcome to<br/><em>Fitbodies by MK.</em></h1>
+    <p>This is your starting point. Read through once, then keep this page saved — it has everything you need to get the most from our work together.</p>
+  </div>
+</div>
+
+<!-- PERSONAL MESSAGE -->
+<section class="message-section">
+  <div class="message-inner">
+    <div class="message-card">
+      <div class="message-header">
+        <div class="mk-avatar">MK</div>
+        <div class="mk-info">
+          <h3>A message from MK</h3>
+          <p>Your coach · Fitbodies by MK</p>
+        </div>
+      </div>
+      <div class="message-body">
+        <p>I want to say this clearly from the start: I'm glad you're here. Not in a polished, marketing-copy kind of way — genuinely glad. Deciding to do something about your health takes more than most people realise, and getting to that point is already something.</p>
+        <p>I've been where you are. I know what it's like to spend years behind a desk, to feel your body start to work against you, to carry things that go beyond the physical — and still get up and do something about it. That's the version of coaching I offer. Not just sets and reps. Something that actually fits your real life.</p>
+        <p>What I need from you is honesty. Tell me what's working, what's not. Tell me when life gets in the way. I won't judge it. I'll adjust the plan. The only thing that doesn't work is silence — if I don't know something is hard, I can't help with it.</p>
+        <p>This page walks you through how everything works. Read it, save it, and message me when you're ready to start your first week.</p>
+      </div>
+      <div class="message-sign">— MK</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW COACHING WORKS -->
+<section class="section cream">
+  <div class="section-inner">
+    <p class="section-label">How it works</p>
+    <h2 class="section-title">Everything runs through WhatsApp.</h2>
+    <p class="section-sub">No apps to download. No booking system. No complicated tech. Just a WhatsApp conversation — text or voice notes, whatever feels easier for you.</p>
+    <div class="checkin-grid">
+      <div class="checkin-card">
+        <div class="checkin-num">01</div>
+        <h3>Your programme</h3>
+        <p>Your training plan comes to you before your first week starts. MK builds it around your goals, your schedule, your equipment, and what you told him in your application. It's yours — not a template.</p>
+      </div>
+      <div class="checkin-card">
+        <div class="checkin-num">02</div>
+        <h3>Weekly check-in</h3>
+        <p>Once a week, you send MK a short check-in message. He reads it, looks at how your week went, and sends back any adjustments. The programme evolves with you — it's never static.</p>
+      </div>
+      <div class="checkin-card">
+        <div class="checkin-num">03</div>
+        <h3>Questions and support</h3>
+        <p>Between check-ins, you have direct WhatsApp access to MK. Text or voice note. Questions, concerns, technique doubts — anything. You won't be handed off to an assistant.</p>
+      </div>
+      <div class="checkin-card">
+        <div class="checkin-num">04</div>
+        <h3>Nutrition guidance</h3>
+        <p>General nutrition guidance is included — practical, sustainable, not a rigid meal plan. Full nutrition coaching (PN1) is available as an add-on if you want to go deeper.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEEKLY CHECK-IN -->
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">Your weekly check-in</p>
+    <h2 class="section-title">What to send each week.</h2>
+    <p class="section-sub">The check-in is the engine of your programme. It's how MK stays in sync with what's actually happening in your life — not what he assumes. Keep it honest, not perfect.</p>
+
+    <div class="checkin-template">
+      <h3>Weekly check-in template — copy this to WhatsApp</h3>
+      <div class="checkin-q">
+        <div class="checkin-q-num">1</div>
+        <div class="checkin-q-text">How many workouts did you complete this week? <em>(e.g. 3 out of 4)</em></div>
+      </div>
+      <div class="checkin-q">
+        <div class="checkin-q-num">2</div>
+        <div class="checkin-q-text">How did the sessions feel? <em>(energy, effort, anything that stood out)</em></div>
+      </div>
+      <div class="checkin-q">
+        <div class="checkin-q-num">3</div>
+        <div class="checkin-q-text">Any aches, tightness, or things that didn't feel right?</div>
+      </div>
+      <div class="checkin-q">
+        <div class="checkin-q-num">4</div>
+        <div class="checkin-q-text">How has your eating been? <em>(no tracking needed — just a general sense)</em></div>
+      </div>
+      <div class="checkin-q">
+        <div class="checkin-q-num">5</div>
+        <div class="checkin-q-text">How has your sleep and stress been this week?</div>
+      </div>
+      <div class="checkin-q">
+        <div class="checkin-q-num">6</div>
+        <div class="checkin-q-text">Anything else on your mind — or anything you'd like to change?</div>
+      </div>
+    </div>
+
+    <p style="font-size:0.9rem; color:var(--text-light); line-height:1.7;">Send it as a voice note if writing feels like effort. The questions are a guide, not a form — anything that covers those six areas is fine. Short and honest beats long and polished.</p>
+  </div>
+</section>
+
+<!-- RULES OF ENGAGEMENT -->
+<section class="section cream">
+  <div class="section-inner">
+    <p class="section-label">How to get the most from this</p>
+    <h2 class="section-title">A few things that matter.</h2>
+    <p class="section-sub">These aren't rules imposed on you — they're the things that separate the people who get real results from the ones who don't.</p>
+    <div class="rules-grid">
+      <div class="rule-card">
+        <div class="rule-icon">✅</div>
+        <div>
+          <h3>Do the check-in, even if it's bad</h3>
+          <p>A week where nothing went right is the most important week to check in. That's the information MK needs most. Silence doesn't protect you — it just means the programme can't adapt.</p>
+        </div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">✅</div>
+        <div>
+          <h3>Tell MK when something hurts</h3>
+          <p>Not every ache needs to stop the programme — but MK needs to know about it. Never push through real pain. Say something. The programme can always be adjusted.</p>
+        </div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">✅</div>
+        <div>
+          <h3>Start simple</h3>
+          <p>The first few weeks are about building the habit, not breaking records. Resist the urge to add extra sessions or go harder than the plan says. Consistency is the goal right now.</p>
+        </div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">✅</div>
+        <div>
+          <h3>Life gets in the way — say so</h3>
+          <p>Travel, illness, a hard week at work — these are real. MK has coached through all of it. Let him know so the plan adjusts, rather than you silently falling behind.</p>
+        </div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">✅</div>
+        <div>
+          <h3>Focus on how you feel first</h3>
+          <p>The scale is one signal among many. Energy, sleep, how your clothes fit, how you move — these matter just as much. Notice all of it, not just the number.</p>
+        </div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">✅</div>
+        <div>
+          <h3>Ask the obvious questions</h3>
+          <p>If an exercise doesn't make sense, or you're not sure about a form cue, or you want to swap something — just ask. No question is too small. That's what the access is for.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT + TIMEZONE -->
+<section class="contact-band">
+  <div class="contact-inner">
+    <h2>MK is one message away.</h2>
+    <p>WhatsApp is where everything happens. Text or voice note — whatever's easier. MK is in Doha, Qatar (UTC+3, no daylight saving), so replies come during his waking hours. Most messages get a response within one working day.</p>
+    <a href="https://wa.me/97452086673" target="_blank" rel="noopener" class="btn-wa">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Open WhatsApp
+    </a>
+    <p class="tz-note">Qatar · UTC+3 · No daylight saving · fitbodiesbymk@gmail.com</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Fitbodies <span>by MK</span></div>
+    <div class="footer-copy">&copy; 2026 Fitbodies by MK</div>
+    <div class="footer-links">
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/">fitbodiesbymk.com</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
