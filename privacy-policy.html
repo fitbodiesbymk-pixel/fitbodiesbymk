@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior:smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Fitbodies by MK</title>
+  <meta name="description" content="Privacy Policy for Fitbodies by MK online fitness coaching." />
+  <link rel="canonical" href="https://fitbodiesbymk.com/privacy-policy.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0D1B2E;
+      --mid-navy: #112235;
+      --blue: #2B8FD0;
+      --blue-dark: #1e72aa;
+      --cream: #F9F7F4;
+      --white: #ffffff;
+      --text: #1a1a2e;
+      --text-light: #5a6072;
+    }
+    html { font-size: 16px; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); }
+    h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; letter-spacing: 0.02em; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* NAV */
+    .nav-wrap {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,27,46,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.35rem; font-weight: 700;
+      color: var(--white); letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--blue); }
+    .nav-back {
+      color: rgba(255,255,255,0.72); font-size: 0.9rem; font-weight: 500;
+      display: flex; align-items: center; gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--white); }
+
+    /* PAGE */
+    .page-header {
+      background: var(--navy);
+      padding: 4rem 1.5rem 3rem;
+    }
+    .page-header-inner {
+      max-width: 760px; margin: 0 auto;
+    }
+    .page-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--blue); text-transform: uppercase; letter-spacing: 0.12em;
+      margin-bottom: 1rem;
+    }
+    .page-header h1 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--white); line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .page-header p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.95rem; line-height: 1.7;
+    }
+
+    /* CONTENT */
+    .content-wrap {
+      max-width: 760px; margin: 0 auto;
+      padding: 3.5rem 1.5rem 5rem;
+    }
+    .content-wrap h2 {
+      font-size: 1.35rem; font-weight: 600;
+      color: var(--navy);
+      margin: 2.5rem 0 0.9rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--blue);
+      display: inline-block;
+    }
+    .content-wrap h2:first-child { margin-top: 0; }
+    .content-wrap p {
+      font-size: 0.97rem; line-height: 1.8;
+      color: #2a2a3e; margin-bottom: 1rem;
+    }
+    .content-wrap ul {
+      margin: 0.5rem 0 1rem 1.25rem;
+      display: flex; flex-direction: column; gap: 0.5rem;
+    }
+    .content-wrap li {
+      font-size: 0.97rem; line-height: 1.7;
+      color: #2a2a3e;
+    }
+    .content-wrap a { color: var(--blue); text-decoration: underline; }
+    .content-wrap a:hover { color: var(--blue-dark); }
+    .highlight-box {
+      background: #f0f7fd;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .highlight-box p { margin: 0; font-size: 0.95rem; }
+
+    /* FOOTER */
+    footer { background: var(--navy); padding: 2.5rem 1.5rem; }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-logo {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem; font-weight: 700;
+      color: var(--white); letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .footer-logo span { color: var(--blue); }
+    .footer-copy { color: rgba(255,255,255,0.45); font-size: 0.82rem; }
+    .footer-links {
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.55); font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+
+    @media (max-width: 640px) {
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Fitbodies <span>by MK</span></a>
+    <a href="/" class="nav-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to site
+    </a>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-label">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p>Last updated: 13 October 2026</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content-wrap">
+
+  <div class="highlight-box">
+    <p>This policy explains what information Fitbodies by MK collects, why it's collected, how it's kept safe, and your rights. If you have any questions, email <a href="mailto:fitbodiesbymk@gmail.com">fitbodiesbymk@gmail.com</a>.</p>
+  </div>
+
+  <h2>Who we are</h2>
+  <p>Fitbodies by MK is an online fitness coaching business operated by MK (Mthoko), based in Doha, Qatar. The business provides 1-on-1 online coaching services to clients worldwide.</p>
+  <p>Contact: <a href="mailto:fitbodiesbymk@gmail.com">fitbodiesbymk@gmail.com</a></p>
+
+  <h2>What information we collect</h2>
+  <p>We collect only the information needed to deliver coaching services safely and effectively:</p>
+  <ul>
+    <li><strong>Contact details</strong> — your name, email address, and WhatsApp number</li>
+    <li><strong>Health and fitness information</strong> — your current fitness level, training history, health conditions, injuries, medications, and lifestyle details shared during onboarding and check-ins</li>
+    <li><strong>Progress data</strong> — measurements, training logs, and check-in notes you share during the coaching relationship</li>
+    <li><strong>Payment information</strong> — processed securely by Stripe or PayPal; we do not store card numbers or bank details</li>
+  </ul>
+
+  <h2>Why we collect it</h2>
+  <ul>
+    <li>To provide safe, personalised coaching tailored to your health and goals</li>
+    <li>To communicate with you about your programme via WhatsApp and email</li>
+    <li>To process your coaching payments</li>
+    <li>To comply with our legal obligations as a coaching business registered in Qatar</li>
+  </ul>
+
+  <h2>How long we keep it</h2>
+  <p>Your information is kept for the duration of your coaching relationship and for two years after it ends. After that, it is deleted. If you ask us to delete your data sooner, we will do so within 30 days unless we are legally required to retain it.</p>
+
+  <h2>Who we share it with</h2>
+  <p>We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+  <p>Your information may be shared with:</p>
+  <ul>
+    <li><strong>Stripe</strong> and <strong>PayPal</strong> — solely to process your coaching payments. Both operate under their own privacy policies and comply with applicable data protection laws.</li>
+  </ul>
+  <p>No other third parties receive your information.</p>
+
+  <h2>Health information</h2>
+  <p>Health and fitness information you share is used only to build and adjust your coaching programme. It is treated with the highest level of confidentiality. We do not share it with anyone else.</p>
+  <p>Coaching does not constitute medical advice. If you have a medical condition, injury, or concern, you are encouraged to consult a qualified medical professional.</p>
+
+  <h2>Communications via WhatsApp</h2>
+  <p>Coaching is delivered primarily through WhatsApp. Messages sent on WhatsApp are end-to-end encrypted between you and MK. WhatsApp's own privacy policy governs how that platform handles your data — we are not responsible for WhatsApp's data practices.</p>
+  <p>MK is based in Doha, Qatar (UTC+3, no daylight saving). Replies come during waking hours in that time zone.</p>
+
+  <h2>Your rights</h2>
+  <p>You have the right to:</p>
+  <ul>
+    <li>Ask what information we hold about you</li>
+    <li>Ask us to correct information that is inaccurate</li>
+    <li>Ask us to delete your information</li>
+    <li>Withdraw consent at any time (this does not affect the lawfulness of processing before withdrawal)</li>
+  </ul>
+  <p>To exercise any of these rights, email <a href="mailto:fitbodiesbymk@gmail.com">fitbodiesbymk@gmail.com</a>. We will respond within 30 days.</p>
+
+  <h2>Cookies and website analytics</h2>
+  <p>This website does not use tracking cookies or analytics scripts. No personal data is collected by the website itself when you browse fitbodiesbymk.com.</p>
+
+  <h2>Children</h2>
+  <p>Coaching services are intended for adults aged 18 and over. We do not knowingly collect information from anyone under 18.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes materially, the updated version will be posted on this page with a new "last updated" date. Continuing to use our services after a change means you accept the updated policy.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: <a href="mailto:fitbodiesbymk@gmail.com">fitbodiesbymk@gmail.com</a></p>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Fitbodies <span>by MK</span></div>
+    <div class="footer-copy">&copy; 2026 Fitbodies by MK. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/">Home</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

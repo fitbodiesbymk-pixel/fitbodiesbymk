@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior:smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service | Fitbodies by MK</title>
+  <meta name="description" content="Terms of Service for Fitbodies by MK online fitness coaching." />
+  <link rel="canonical" href="https://fitbodiesbymk.com/terms.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0D1B2E;
+      --mid-navy: #112235;
+      --blue: #2B8FD0;
+      --blue-dark: #1e72aa;
+      --cream: #F9F7F4;
+      --white: #ffffff;
+      --text: #1a1a2e;
+      --text-light: #5a6072;
+    }
+    html { font-size: 16px; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); }
+    h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; letter-spacing: 0.02em; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* NAV */
+    .nav-wrap {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,27,46,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.35rem; font-weight: 700;
+      color: var(--white); letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--blue); }
+    .nav-back {
+      color: rgba(255,255,255,0.72); font-size: 0.9rem; font-weight: 500;
+      display: flex; align-items: center; gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--white); }
+
+    /* PAGE */
+    .page-header {
+      background: var(--navy);
+      padding: 4rem 1.5rem 3rem;
+    }
+    .page-header-inner {
+      max-width: 760px; margin: 0 auto;
+    }
+    .page-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--blue); text-transform: uppercase; letter-spacing: 0.12em;
+      margin-bottom: 1rem;
+    }
+    .page-header h1 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--white); line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .page-header p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.95rem; line-height: 1.7;
+    }
+
+    /* CONTENT */
+    .content-wrap {
+      max-width: 760px; margin: 0 auto;
+      padding: 3.5rem 1.5rem 5rem;
+    }
+    .content-wrap h2 {
+      font-size: 1.35rem; font-weight: 600;
+      color: var(--navy);
+      margin: 2.5rem 0 0.9rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--blue);
+      display: inline-block;
+    }
+    .content-wrap h2:first-child { margin-top: 0; }
+    .content-wrap p {
+      font-size: 0.97rem; line-height: 1.8;
+      color: #2a2a3e; margin-bottom: 1rem;
+    }
+    .content-wrap ul {
+      margin: 0.5rem 0 1rem 1.25rem;
+      display: flex; flex-direction: column; gap: 0.5rem;
+    }
+    .content-wrap li {
+      font-size: 0.97rem; line-height: 1.7;
+      color: #2a2a3e;
+    }
+    .content-wrap a { color: var(--blue); text-decoration: underline; }
+    .content-wrap a:hover { color: var(--blue-dark); }
+    .highlight-box {
+      background: #f0f7fd;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .highlight-box p { margin: 0; font-size: 0.95rem; }
+
+    /* FOOTER */
+    footer { background: var(--navy); padding: 2.5rem 1.5rem; }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-logo {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem; font-weight: 700;
+      color: var(--white); letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .footer-logo span { color: var(--blue); }
+    .footer-copy { color: rgba(255,255,255,0.45); font-size: 0.82rem; }
+    .footer-links {
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.55); font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+
+    @media (max-width: 640px) {
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Fitbodies <span>by MK</span></a>
+    <a href="/" class="nav-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to site
+    </a>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-label">Legal</p>
+    <h1>Terms of Service</h1>
+    <p>Last updated: 13 October 2026</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content-wrap">
+
+  <div class="highlight-box">
+    <p>These terms apply to all 1-on-1 online coaching services provided by Fitbodies by MK. By starting a coaching programme, you agree to these terms. Questions: <a href="mailto:fitbodiesbymk@gmail.com">fitbodiesbymk@gmail.com</a></p>
+  </div>
+
+  <h2>The coaching service</h2>
+  <p>Fitbodies by MK provides 1-on-1 online fitness coaching. The service is delivered remotely via WhatsApp (text and voice notes) and email. There are no live video sessions unless specifically agreed in writing.</p>
+  <p>Each coaching programme includes:</p>
+  <ul>
+    <li>A personal workout programme tailored to your goals and situation</li>
+    <li>A weekly check-in to review progress and adjust the plan</li>
+    <li>General nutrition guidance (not full nutrition coaching)</li>
+    <li>WhatsApp access to MK for questions and support</li>
+  </ul>
+  <p>Full nutrition coaching is available as an optional add-on at an additional monthly fee, and only when requested by the client.</p>
+
+  <h2>Pricing and commitment</h2>
+  <p>Coaching is billed monthly. The minimum commitment is three months. This allows enough time to establish habits, make measurable progress, and build a productive coaching relationship.</p>
+  <p>Pricing is agreed before the programme starts and confirmed in writing. Your agreed rate is locked in for the duration of your commitment. Price changes for new clients do not affect existing clients during their current term.</p>
+
+  <h2>Payment</h2>
+  <p>Payment is processed via Stripe or PayPal. The first payment is due before coaching begins. Subsequent payments are due monthly on the same date.</p>
+  <p>If a payment is missed, coaching will pause until the account is brought up to date. If payment is not received within 14 days of the due date, the coaching arrangement may be ended.</p>
+
+  <h2>Cancellation</h2>
+  <p>You may cancel at any time, but payments made are non-refundable. If you cancel before the three-month minimum is complete, the remaining balance for the minimum term is still due.</p>
+  <p>After the minimum term, you can end coaching at any time by giving 14 days' notice via WhatsApp or email. No payment is due after the notice period ends.</p>
+
+  <h2>Communication and response times</h2>
+  <p>Coaching is delivered asynchronously — there are no scheduled calls or live sessions. MK is based in Doha, Qatar (UTC+3, no daylight saving). Messages are answered during waking hours in that time zone.</p>
+  <p>You will receive a response to most messages within one working day. During planned breaks (notified in advance), responses may take longer.</p>
+
+  <h2>Your responsibilities as a client</h2>
+  <p>To get the most from coaching, you agree to:</p>
+  <ul>
+    <li>Complete your health screening (PAR-Q) honestly before starting</li>
+    <li>Let MK know immediately about any injury, illness, or change in health</li>
+    <li>Show up to weekly check-ins — if you miss two in a row without notice, coaching will pause</li>
+    <li>Follow the programme as closely as your situation allows and communicate if something is not working</li>
+  </ul>
+
+  <h2>Health screening and medical advice</h2>
+  <p>All new clients complete a PAR-Q (Physical Activity Readiness Questionnaire) before starting. If the PAR-Q indicates a condition that requires medical clearance, coaching will not begin until you provide written clearance from a doctor.</p>
+  <p>Coaching is not medical advice, diagnosis, or treatment. If you experience pain, injury, or a medical concern, stop training and consult a qualified medical professional. MK will always refer you to a doctor for anything medical — not attempt to treat it.</p>
+
+  <h2>No guaranteed results</h2>
+  <p>Fitness results depend on many factors — genetics, consistency, sleep, stress, nutrition, and life circumstances — that are outside any coach's control. No specific outcomes are promised or guaranteed. MK will work hard to help you make real, sustainable progress, and will adjust the programme when something is not working.</p>
+
+  <h2>Programme content and intellectual property</h2>
+  <p>The training programmes, templates, and materials MK creates for you are for your personal use only. You may not share, copy, sell, or distribute them without written permission.</p>
+
+  <h2>Confidentiality</h2>
+  <p>Everything shared within the coaching relationship — your health details, personal circumstances, and progress — is treated as confidential. MK will not share your information with anyone except payment processors (Stripe/PayPal), as outlined in the Privacy Policy.</p>
+
+  <h2>Waiver of liability</h2>
+  <p>Exercise carries inherent risks. By engaging in a coaching programme with Fitbodies by MK, you acknowledge that you are participating voluntarily and accept responsibility for your own safety during all training activities. Fitbodies by MK is not liable for any injury, illness, or loss arising from following the coaching programme, provided the programme was followed as designed and any known health conditions were disclosed at the time of onboarding.</p>
+
+  <h2>Governing law</h2>
+  <p>These terms are governed by the laws of Qatar. Any disputes will first be addressed through direct communication in good faith.</p>
+
+  <h2>Changes to these terms</h2>
+  <p>These terms may be updated from time to time. Active clients will be notified of any material changes via WhatsApp or email. Continued participation in coaching after receiving notice of a change means you accept the updated terms.</p>
+
+  <h2>Contact</h2>
+  <p>Questions: <a href="mailto:fitbodiesbymk@gmail.com">fitbodiesbymk@gmail.com</a></p>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Fitbodies <span>by MK</span></div>
+    <div class="footer-copy">&copy; 2026 Fitbodies by MK. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/">Home</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
