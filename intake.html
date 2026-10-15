@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome Questionnaire | Fitbodies by MK</title>
-  <meta name="description" content="Founding client intake questionnaire for Fitbodies by MK coaching." />
+  <meta name="description" content="Client intake questionnaire for Fitbodies by MK coaching." />
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -407,7 +407,7 @@
 <div class="nav-wrap">
   <div class="nav-inner">
     <div class="nav-logo">Fitbodies <span>by MK</span></div>
-    <div class="nav-note">Founding Client Questionnaire</div>
+    <div class="nav-note">Welcome Questionnaire</div>
   </div>
 </div>
 
@@ -416,7 +416,7 @@
   <div class="form-hero-inner">
     <p class="form-eyebrow">Welcome Questionnaire</p>
     <h1>Fitbodies <em>by MK</em></h1>
-    <p class="form-intro">Thanks for joining as a founding client. These answers help me build a programme that fits your real week, not an ideal one. Answer in your own words — there are no wrong answers.</p>
+    <p class="form-intro">These answers help me build a programme that fits your real week, not an ideal one. Answer in your own words — there are no wrong answers.</p>
   </div>
 </div>
 
@@ -722,8 +722,8 @@
       </div>
 
       <div class="agreement-item">
-        <input type="checkbox" id="agreeTestimonial" name="Agreement: founding client testimonial" value="Confirmed" required />
-        <label for="agreeTestimonial">As a founding client, I'm happy to share honest feedback in my own words at week 12 — written or on video — about how I feel and what's changed. MK will never edit or "tidy" what I say.</label>
+        <input type="checkbox" id="agreeTestimonial" name="Agreement: week 12 testimonial" value="Confirmed" required />
+        <label for="agreeTestimonial">I'm happy to share honest feedback in my own words at week 12 — written or on video — about how I feel and what's changed. MK will never edit or "tidy" what I say.</label>
       </div>
     </div>
 
@@ -862,7 +862,7 @@
         body.push(key + ':\n' + val);
       });
       window.location.href = 'mailto:fitbodiesbymk@gmail.com'
-        + '?subject=' + encodeURIComponent('Founding Client Questionnaire — ' + (formData.get('Full name') || 'New client'))
+        + '?subject=' + encodeURIComponent('Welcome Questionnaire — ' + (formData.get('Full name') || 'New client'))
         + '&body=' + encodeURIComponent(body.join('\n\n---\n\n'));
       return;
     }
