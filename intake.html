@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior:smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome Questionnaire | Fitbodies by MK</title>
+  <meta name="description" content="Founding client intake questionnaire for Fitbodies by MK coaching." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0D1B2E;
+      --mid-navy: #112235;
+      --blue: #2B8FD0;
+      --blue-dark: #1e72aa;
+      --blue-light: rgba(43,143,208,0.1);
+      --cream: #F9F7F4;
+      --white: #ffffff;
+      --text: #1a1a2e;
+      --text-light: #5a6072;
+      --border: #dde1e9;
+      --border-focus: #2B8FD0;
+      --error: #e53e3e;
+      --success: #25D366;
+    }
+    html { font-size: 16px; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--cream); }
+    h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; letter-spacing: 0.02em; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    .nav-wrap {
+      background: var(--navy);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .nav-inner {
+      max-width: 800px; margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem; font-weight: 700;
+      color: var(--white); letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--blue); }
+    .nav-note { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+
+    /* HERO */
+    .form-hero {
+      background: var(--navy);
+      padding: 3.5rem 1.5rem 0;
+    }
+    .form-hero-inner {
+      max-width: 800px; margin: 0 auto;
+    }
+    .form-eyebrow {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.78rem; font-weight: 500;
+      color: var(--blue); text-transform: uppercase; letter-spacing: 0.12em;
+      margin-bottom: 0.75rem;
+    }
+    .form-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--white); line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .form-hero h1 em { font-style: normal; color: var(--blue); }
+    .form-intro {
+      font-size: 0.97rem; line-height: 1.75;
+      color: rgba(255,255,255,0.65);
+      max-width: 580px;
+      padding-bottom: 2.5rem;
+    }
+
+    /* PROGRESS STRIP */
+    .progress-strip {
+      background: var(--mid-navy);
+      padding: 0 1.5rem;
+    }
+    .progress-inner {
+      max-width: 800px; margin: 0 auto;
+      display: flex; overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      gap: 0;
+    }
+    .progress-inner::-webkit-scrollbar { display: none; }
+    .progress-item {
+      flex-shrink: 0;
+      padding: 0.75rem 1.1rem;
+      font-size: 0.75rem; font-weight: 600;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      cursor: default;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .progress-item.active {
+      color: var(--blue);
+      border-bottom-color: var(--blue);
+    }
+
+    /* MAIN FORM AREA */
+    .form-body {
+      max-width: 800px; margin: 0 auto;
+      padding: 2.5rem 1.5rem 5rem;
+    }
+
+    /* SECTION BLOCKS */
+    .form-section {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 2rem 2.25rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(13,27,46,0.07);
+    }
+    .form-section-header {
+      display: flex; align-items: flex-start; gap: 1rem;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid rgba(13,27,46,0.07);
+    }
+    .section-num {
+      background: var(--blue);
+      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.85rem; font-weight: 600;
+      padding: 0.3rem 0.65rem;
+      border-radius: 5px;
+      flex-shrink: 0;
+      letter-spacing: 0.04em;
+    }
+    .section-title-wrap h2 {
+      font-size: 1.2rem; font-weight: 600; color: var(--navy);
+    }
+    .section-title-wrap p {
+      font-size: 0.85rem; color: var(--text-light);
+      margin-top: 0.2rem; line-height: 1.5;
+    }
+
+    /* FORM FIELDS */
+    .form-field {
+      margin-bottom: 1.5rem;
+    }
+    .form-field:last-child { margin-bottom: 0; }
+    .field-label {
+      display: block;
+      font-size: 0.92rem; font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.45rem;
+      line-height: 1.4;
+    }
+    .field-label .q-num {
+      color: var(--blue); margin-right: 0.35rem;
+      font-size: 0.85rem;
+    }
+    .field-hint {
+      font-size: 0.82rem; color: var(--text-light);
+      margin-top: 0.2rem; margin-bottom: 0.55rem;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+    .field-required { color: var(--error); margin-left: 0.15rem; }
+
+    /* TEXT INPUTS */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea,
+    select {
+      width: 100%;
+      border: 1.5px solid var(--border);
+      border-radius: 7px;
+      padding: 0.7rem 0.9rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.94rem;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      -webkit-appearance: none;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    input[type="number"]:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px rgba(43,143,208,0.12);
+    }
+    textarea { resize: vertical; min-height: 80px; line-height: 1.6; }
+    textarea.tall { min-height: 110px; }
+
+    /* RADIO + CHECKBOX OPTIONS */
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 0.6rem;
+    }
+    .options-grid.two-col {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    .option-label {
+      display: flex; align-items: center; gap: 0.6rem;
+      border: 1.5px solid var(--border);
+      border-radius: 7px;
+      padding: 0.65rem 0.9rem;
+      cursor: pointer;
+      font-size: 0.9rem; color: var(--text);
+      transition: border-color 0.15s, background 0.15s;
+      line-height: 1.35;
+      user-select: none;
+    }
+    .option-label:hover { border-color: var(--blue); background: var(--blue-light); }
+    .option-label input[type="radio"],
+    .option-label input[type="checkbox"] {
+      width: 16px; height: 16px; flex-shrink: 0;
+      accent-color: var(--blue);
+      cursor: pointer;
+    }
+    .option-label.checked {
+      border-color: var(--blue);
+      background: var(--blue-light);
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    /* SCALE (1-10) */
+    .scale-wrap {
+      display: flex; gap: 0.45rem; flex-wrap: wrap;
+    }
+    .scale-label {
+      display: flex; align-items: center; justify-content: center;
+      width: 44px; height: 44px;
+      border: 1.5px solid var(--border);
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 0.95rem; font-weight: 600; color: var(--text-light);
+      transition: border-color 0.15s, background 0.15s, color 0.15s;
+      user-select: none;
+      flex-shrink: 0;
+    }
+    .scale-label:hover { border-color: var(--blue); color: var(--blue); }
+    .scale-label input { display: none; }
+    .scale-label.checked {
+      background: var(--blue); border-color: var(--blue);
+      color: var(--white);
+    }
+    .scale-ends {
+      display: flex; justify-content: space-between;
+      margin-top: 0.4rem;
+      font-size: 0.78rem; color: var(--text-light);
+    }
+
+    /* AGREEMENT SECTION */
+    .agreement-section {
+      background: var(--navy);
+      border-radius: 12px;
+      padding: 2rem 2.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .agreement-section .form-section-header {
+      border-bottom-color: rgba(255,255,255,0.1);
+    }
+    .agreement-section .section-num { background: rgba(43,143,208,0.3); }
+    .agreement-section .section-title-wrap h2 { color: var(--white); }
+    .agreement-section .section-title-wrap p { color: rgba(255,255,255,0.5); }
+    .agreement-item {
+      display: flex; gap: 0.9rem; align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    .agreement-item:last-child { margin-bottom: 0; }
+    .agreement-item input[type="checkbox"] {
+      width: 18px; height: 18px; flex-shrink: 0;
+      margin-top: 0.15rem; cursor: pointer;
+      accent-color: var(--blue);
+    }
+    .agreement-item label {
+      font-size: 0.9rem; line-height: 1.65;
+      color: rgba(255,255,255,0.8); cursor: pointer;
+    }
+    .agreement-item label a {
+      color: var(--blue); text-decoration: underline;
+    }
+
+    /* SUBMIT */
+    .submit-wrap {
+      text-align: center;
+      padding: 0.5rem 0 0;
+    }
+    .btn-submit {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: var(--blue); color: var(--white);
+      padding: 1rem 2.5rem; border-radius: 8px;
+      font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.1rem;
+      letter-spacing: 0.04em;
+      border: none; cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      width: 100%; justify-content: center;
+      max-width: 360px;
+    }
+    .btn-submit:hover:not(:disabled) {
+      background: var(--blue-dark); transform: translateY(-1px);
+    }
+    .btn-submit:disabled {
+      opacity: 0.65; cursor: not-allowed; transform: none;
+    }
+    .btn-submit svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .submit-note {
+      font-size: 0.82rem; color: var(--text-light);
+      margin-top: 0.75rem; line-height: 1.6;
+    }
+
+    /* ERROR / SUCCESS STATES */
+    .field-error {
+      font-size: 0.82rem; color: var(--error);
+      margin-top: 0.3rem; display: none;
+    }
+    .form-error-banner {
+      background: #fff5f5; border: 1px solid #fca5a5;
+      border-radius: 8px; padding: 1rem 1.25rem;
+      color: #b91c1c; font-size: 0.9rem; line-height: 1.6;
+      margin-bottom: 1.5rem; display: none;
+    }
+
+    /* THANK YOU STATE */
+    .thank-you {
+      display: none;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 4rem 2rem;
+      text-align: center;
+      border: 1px solid rgba(13,27,46,0.07);
+      margin-bottom: 1.5rem;
+    }
+    .thank-you .ty-icon {
+      width: 64px; height: 64px; margin: 0 auto 1.5rem;
+      background: rgba(37,211,102,0.1);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--success);
+    }
+    .thank-you .ty-icon svg { width: 32px; height: 32px; }
+    .thank-you h2 {
+      font-size: 1.75rem; color: var(--navy); margin-bottom: 1rem;
+    }
+    .thank-you p {
+      font-size: 0.97rem; line-height: 1.8;
+      color: var(--text-light); max-width: 460px; margin: 0 auto 0.75rem;
+    }
+    .thank-you .wa-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      margin-top: 1.5rem;
+      background: var(--success); color: white;
+      padding: 0.8rem 1.75rem; border-radius: 8px;
+      font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1rem;
+      letter-spacing: 0.04em;
+      transition: background 0.2s;
+    }
+    .thank-you .wa-link:hover { background: #1aab52; }
+    .thank-you .wa-link svg { width: 18px; height: 18px; }
+
+    /* CONDITIONAL FIELD */
+    .conditional-field { display: none; }
+    .conditional-field.visible { display: block; }
+
+    /* FOOTER */
+    footer { background: var(--navy); padding: 2rem 1.5rem; }
+    .footer-inner {
+      max-width: 800px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-logo {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--white); letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .footer-logo span { color: var(--blue); }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .footer-links a {
+      color: rgba(255,255,255,0.45); font-size: 0.82rem; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+
+    @media (max-width: 600px) {
+      .form-section { padding: 1.5rem; }
+      .agreement-section { padding: 1.5rem; }
+      .options-grid { grid-template-columns: 1fr; }
+      .options-grid.two-col { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo">Fitbodies <span>by MK</span></div>
+    <div class="nav-note">Founding Client Questionnaire</div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="form-hero">
+  <div class="form-hero-inner">
+    <p class="form-eyebrow">Welcome Questionnaire</p>
+    <h1>Fitbodies <em>by MK</em></h1>
+    <p class="form-intro">Thanks for joining as a founding client. These answers help me build a programme that fits your real week, not an ideal one. Answer in your own words — there are no wrong answers.</p>
+  </div>
+</div>
+
+<!-- PROGRESS STRIP -->
+<div class="progress-strip">
+  <div class="progress-inner">
+    <div class="progress-item active" id="prog-1">1 · The basics</div>
+    <div class="progress-item" id="prog-2">2 · Your workweek</div>
+    <div class="progress-item" id="prog-3">3 · Training</div>
+    <div class="progress-item" id="prog-4">4 · In your words</div>
+    <div class="progress-item" id="prog-5">5 · Daily life</div>
+    <div class="progress-item" id="prog-6">6 · Getting to know you</div>
+    <div class="progress-item" id="prog-7">7 · Agreement</div>
+  </div>
+</div>
+
+<!-- FORM BODY -->
+<div class="form-body">
+
+  <div class="form-error-banner" id="formErrorBanner">
+    Something went wrong sending your form. Please try again, or email MK directly at <a href="mailto:fitbodiesbymk@gmail.com">fitbodiesbymk@gmail.com</a>.
+  </div>
+
+  <!-- THANK YOU (hidden until submission) -->
+  <div class="thank-you" id="thankYou">
+    <div class="ty-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+    </div>
+    <h2>Got it. Thank you.</h2>
+    <p>MK has received your questionnaire and will be in touch via WhatsApp within one working day.</p>
+    <p>In the meantime, bookmark the welcome page — it has everything you need to know about how your coaching works.</p>
+    <a href="https://wa.me/97452086673" target="_blank" rel="noopener" class="wa-link">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Open WhatsApp
+    </a>
+  </div>
+
+  <form id="intakeForm" novalidate>
+
+    <!-- ===================== SECTION 1 ===================== -->
+    <div class="form-section" data-section="1">
+      <div class="form-section-header">
+        <div class="section-num">01</div>
+        <div class="section-title-wrap">
+          <h2>The basics</h2>
+          <p>So MK knows who you are and how to reach you.</p>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="fullName"><span class="q-num">1.</span> Full name <span class="field-required">*</span></label>
+        <input type="text" id="fullName" name="Full name" required autocomplete="name" />
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="email"><span class="q-num">2.</span> Email <span class="field-required">*</span></label>
+        <input type="email" id="email" name="Email" required autocomplete="email" />
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="whatsapp"><span class="q-num">3.</span> WhatsApp number <span class="field-required">*</span></label>
+        <div class="field-hint">Include your country code (e.g. +44 7700 900000)</div>
+        <input type="tel" id="whatsapp" name="WhatsApp number" required autocomplete="tel" />
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="timezone"><span class="q-num">4.</span> Country and time zone <span class="field-required">*</span></label>
+        <div class="field-hint">e.g. South Africa (UTC+2), UK (UTC+0), UAE (UTC+4)</div>
+        <input type="text" id="timezone" name="Country and time zone" required />
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="age"><span class="q-num">5.</span> Age <span class="field-required">*</span></label>
+        <input type="number" id="age" name="Age" required min="18" max="99" style="max-width:120px;" />
+      </div>
+    </div>
+
+    <!-- ===================== SECTION 2 ===================== -->
+    <div class="form-section" data-section="2">
+      <div class="form-section-header">
+        <div class="section-num">02</div>
+        <div class="section-title-wrap">
+          <h2>Your workweek</h2>
+          <p>MK builds your programme around your actual schedule, not a perfect one.</p>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="work"><span class="q-num">6.</span> What do you do for work? <span class="field-required">*</span></label>
+        <input type="text" id="work" name="What do you do for work" required placeholder="e.g. Software engineer at a tech firm, desk-based, mostly meetings" />
+      </div>
+
+      <div class="form-field">
+        <label class="field-label"><span class="q-num">7.</span> Roughly how many hours a day are you sitting? <span class="field-required">*</span></label>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="Hours sitting per day" value="Under 4 hours" required /> Under 4 hours</label>
+          <label class="option-label"><input type="radio" name="Hours sitting per day" value="4 to 6 hours" /> 4 to 6 hours</label>
+          <label class="option-label"><input type="radio" name="Hours sitting per day" value="6 to 8 hours" /> 6 to 8 hours</label>
+          <label class="option-label"><input type="radio" name="Hours sitting per day" value="8+ hours" /> 8+ hours</label>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="trainDays"><span class="q-num">8.</span> Which days and times could you realistically train? <span class="field-required">*</span></label>
+        <div class="field-hint">Be honest about what actually works — not the ideal version.</div>
+        <textarea id="trainDays" name="Available training days and times" required placeholder="e.g. Mon/Wed/Fri mornings before 8am, one weekend session"></textarea>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label"><span class="q-num">9.</span> How long can a session be on a normal day? <span class="field-required">*</span></label>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="Session length" value="20 minutes" required /> 20 min</label>
+          <label class="option-label"><input type="radio" name="Session length" value="30 minutes" /> 30 min</label>
+          <label class="option-label"><input type="radio" name="Session length" value="45 minutes" /> 45 min</label>
+          <label class="option-label"><input type="radio" name="Session length" value="60 minutes" /> 60 min</label>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="busyWeeks"><span class="q-num">10.</span> What usually happens to your plans when work gets busy?</label>
+        <div class="field-hint">Be straight with MK here — it helps him build a plan that survives real life.</div>
+        <textarea id="busyWeeks" name="What happens when work gets busy" placeholder="e.g. I skip the gym, stay late, eat badly, barely sleep..."></textarea>
+      </div>
+    </div>
+
+    <!-- ===================== SECTION 3 ===================== -->
+    <div class="form-section" data-section="3">
+      <div class="form-section-header">
+        <div class="section-num">03</div>
+        <div class="section-title-wrap">
+          <h2>Training background</h2>
+          <p>What you've done, what's worked, and where you're starting from.</p>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label"><span class="q-num">11.</span> Where will you train? <span class="field-required">*</span></label>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="Training location" value="Home" required id="trainHome" /> Home</label>
+          <label class="option-label"><input type="radio" name="Training location" value="Gym" id="trainGym" /> Gym</label>
+          <label class="option-label"><input type="radio" name="Training location" value="Both" id="trainBoth" /> Both</label>
+          <label class="option-label"><input type="radio" name="Training location" value="Outdoors" id="trainOut" /> Outdoors</label>
+        </div>
+      </div>
+
+      <div class="form-field conditional-field" id="equipmentField">
+        <label class="field-label" for="equipment"><span class="q-num">12.</span> If at home, what equipment do you have?</label>
+        <div class="field-hint">e.g. dumbbells, resistance bands, pull-up bar, nothing yet</div>
+        <input type="text" id="equipment" name="Home equipment" placeholder="List what you have — or say none if starting from scratch" />
+      </div>
+
+      <div class="form-field" id="equipmentField-gym" style="display:none;">
+        <label class="field-label" for="equipmentGym"><span class="q-num">12.</span> Which gym do you use, and does it have full equipment?</label>
+        <input type="text" id="equipmentGym" name="Gym details" placeholder="e.g. Anytime Fitness, full weights and machines" />
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="currentActivity"><span class="q-num">13.</span> What does your activity look like right now?</label>
+        <textarea id="currentActivity" name="Current activity level" placeholder="e.g. Not been active for 2 years. Walk the dog most mornings. Used to gym but stopped when work got intense."></textarea>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="triedBefore"><span class="q-num">14.</span> What have you tried before? What worked, and what didn't?</label>
+        <textarea class="tall" id="triedBefore" name="Training history and what worked" placeholder="e.g. Ran for a few months in 2022 — liked it but my knees hurt. Tried a gym programme but it was too complicated to stick to..."></textarea>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="prevCoach"><span class="q-num">15.</span> Have you had a coach before — in person or online? How was it?</label>
+        <textarea id="prevCoach" name="Previous coaching experience" placeholder="e.g. Had a PT for 6 months — was great but too expensive to continue. Or: never had a coach before."></textarea>
+      </div>
+    </div>
+
+    <!-- ===================== SECTION 4 ===================== -->
+    <div class="form-section" data-section="4">
+      <div class="form-section-header">
+        <div class="section-num">04</div>
+        <div class="section-title-wrap">
+          <h2>In your own words</h2>
+          <p>The most important section. Take a minute with these.</p>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="whyNow"><span class="q-num">16.</span> Why now? What made you decide to start? <span class="field-required">*</span></label>
+        <textarea class="tall" id="whyNow" name="Why now" required placeholder="Something changed, or something's been building for a while. What is it?"></textarea>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="successLooks"><span class="q-num">17.</span> Twelve weeks from now, what would make you say this was worth it? <span class="field-required">*</span></label>
+        <div class="field-hint">Not "lose X kg" — how do you want to feel? What do you want to be able to do?</div>
+        <textarea class="tall" id="successLooks" name="What success looks like at 12 weeks" required placeholder="e.g. Waking up with more energy, not getting out of breath on the stairs, feeling strong again..."></textarea>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="obstacles"><span class="q-num">18.</span> What's most likely to get in your way?</label>
+        <textarea id="obstacles" name="Likely obstacles" placeholder="e.g. Work travel, late nights, motivation drops after the first few weeks..."></textarea>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label"><span class="q-num">19.</span> On a scale of 1 to 10, how ready are you to make this a priority? <span class="field-required">*</span></label>
+        <div class="field-hint">1 = still on the fence, 10 = completely committed</div>
+        <div class="scale-wrap" id="readinessScale">
+          <label class="scale-label"><input type="radio" name="Readiness (1-10)" value="1" required />1</label>
+          <label class="scale-label"><input type="radio" name="Readiness (1-10)" value="2" />2</label>
+          <label class="scale-label"><input type="radio" name="Readiness (1-10)" value="3" />3</label>
+          <label class="scale-label"><input type="radio" name="Readiness (1-10)" value="4" />4</label>
+          <label class="scale-label"><input type="radio" name="Readiness (1-10)" value="5" />5</label>
+          <label class="scale-label"><input type="radio" name="Readiness (1-10)" value="6" />6</label>
+          <label class="scale-label"><input type="radio" name="Readiness (1-10)" value="7" />7</label>
+          <label class="scale-label"><input type="radio" name="Readiness (1-10)" value="8" />8</label>
+          <label class="scale-label"><input type="radio" name="Readiness (1-10)" value="9" />9</label>
+          <label class="scale-label"><input type="radio" name="Readiness (1-10)" value="10" />10</label>
+        </div>
+        <div class="scale-ends"><span>Still on the fence</span><span>Completely committed</span></div>
+      </div>
+    </div>
+
+    <!-- ===================== SECTION 5 ===================== -->
+    <div class="form-section" data-section="5">
+      <div class="form-section-header">
+        <div class="section-num">05</div>
+        <div class="section-title-wrap">
+          <h2>Daily life</h2>
+          <p>Sleep, energy, and eating patterns shape how your programme is designed.</p>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="sleep"><span class="q-num">20.</span> On average, how many hours do you sleep?</label>
+        <input type="text" id="sleep" name="Average sleep hours" placeholder="e.g. 6–7 hours, but it varies a lot with work" style="max-width:320px;" />
+      </div>
+
+      <div class="form-field">
+        <label class="field-label"><span class="q-num">21.</span> How would you rate your energy most days?</label>
+        <div class="field-hint">1 = exhausted all the time, 10 = consistently energised</div>
+        <div class="scale-wrap" id="energyScale">
+          <label class="scale-label"><input type="radio" name="Energy level (1-10)" value="1" />1</label>
+          <label class="scale-label"><input type="radio" name="Energy level (1-10)" value="2" />2</label>
+          <label class="scale-label"><input type="radio" name="Energy level (1-10)" value="3" />3</label>
+          <label class="scale-label"><input type="radio" name="Energy level (1-10)" value="4" />4</label>
+          <label class="scale-label"><input type="radio" name="Energy level (1-10)" value="5" />5</label>
+          <label class="scale-label"><input type="radio" name="Energy level (1-10)" value="6" />6</label>
+          <label class="scale-label"><input type="radio" name="Energy level (1-10)" value="7" />7</label>
+          <label class="scale-label"><input type="radio" name="Energy level (1-10)" value="8" />8</label>
+          <label class="scale-label"><input type="radio" name="Energy level (1-10)" value="9" />9</label>
+          <label class="scale-label"><input type="radio" name="Energy level (1-10)" value="10" />10</label>
+        </div>
+        <div class="scale-ends"><span>Exhausted always</span><span>Consistently strong</span></div>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="typicalEating"><span class="q-num">22.</span> Describe a typical day of eating in 2 or 3 lines.</label>
+        <div class="field-hint">No tracking needed — just what a normal day actually looks like.</div>
+        <textarea id="typicalEating" name="Typical day of eating" placeholder="e.g. Skip breakfast, big lunch at my desk, snack on biscuits in the afternoon, decent dinner at home..."></textarea>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="foodRestrictions"><span class="q-num">23.</span> Any foods you don't eat, for any reason?</label>
+        <div class="field-hint">Preferences, religion, allergies, intolerances — anything MK should know.</div>
+        <input type="text" id="foodRestrictions" name="Food restrictions or preferences" placeholder="e.g. No pork, lactose intolerant, don't enjoy fish" />
+      </div>
+    </div>
+
+    <!-- ===================== SECTION 6 ===================== -->
+    <div class="form-section" data-section="6">
+      <div class="form-section-header">
+        <div class="section-num">06</div>
+        <div class="section-title-wrap">
+          <h2>Getting to know you</h2>
+          <p>Coaching works better when MK knows the whole person, not just the client.</p>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="enjoyOutsideWork"><span class="q-num">24.</span> What do you enjoy outside work?</label>
+        <textarea id="enjoyOutsideWork" name="Interests outside work" placeholder="e.g. Football at weekends, cooking, travelling, watching sport..."></textarea>
+      </div>
+
+      <div class="form-field">
+        <label class="field-label" for="anythingElse"><span class="q-num">25.</span> Anything else you'd like MK to know?</label>
+        <textarea class="tall" id="anythingElse" name="Anything else" placeholder="Anything at all — health, life situation, things that haven't come up yet. No pressure to fill this in."></textarea>
+      </div>
+    </div>
+
+    <!-- ===================== SECTION 7 — AGREEMENT ===================== -->
+    <div class="agreement-section" data-section="7">
+      <div class="form-section-header">
+        <div class="section-num">07</div>
+        <div class="section-title-wrap">
+          <h2>Agreement</h2>
+          <p>Three quick confirmations before you submit.</p>
+        </div>
+      </div>
+
+      <div class="agreement-item">
+        <input type="checkbox" id="agreeComms" name="Agreement: coaching comms" value="Confirmed" required />
+        <label for="agreeComms">I understand that coaching is delivered via WhatsApp and email, and that MK replies during his support hours from Doha, Qatar (UTC+3). I'm comfortable with this asynchronous format.</label>
+      </div>
+
+      <div class="agreement-item">
+        <input type="checkbox" id="agreeParq" name="Agreement: PAR-Q and waiver" value="Confirmed" required />
+        <label for="agreeParq">I have completed (or will complete before starting) the PAR-Q health screening and the Fitbodies by MK liability waiver, and my answers are honest.</label>
+      </div>
+
+      <div class="agreement-item">
+        <input type="checkbox" id="agreeTestimonial" name="Agreement: founding client testimonial" value="Confirmed" required />
+        <label for="agreeTestimonial">As a founding client, I'm happy to share honest feedback in my own words at week 12 — written or on video — about how I feel and what's changed. MK will never edit or "tidy" what I say.</label>
+      </div>
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="submit-wrap">
+      <button type="submit" class="btn-submit" id="submitBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Let's get started
+      </button>
+      <p class="submit-note">Your answers go straight to MK. He'll be in touch within one working day.</p>
+    </div>
+
+  </form>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Fitbodies <span>by MK</span></div>
+    <div class="footer-links">
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/">fitbodiesbymk.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ─── CONFIGURATION ──────────────────────────────────────────────────────────
+  // To activate form submissions:
+  // 1. Go to https://formspree.io and sign up free with fitbodiesbymk@gmail.com
+  // 2. Create a new form — copy the form ID (looks like "xabcdefg")
+  // 3. Replace FORMSPREE_ID below with your actual ID
+  var FORMSPREE_ENDPOINT = 'https://formspree.io/f/FORMSPREE_ID';
+  // ────────────────────────────────────────────────────────────────────────────
+
+  // --- OPTION HIGHLIGHTING ---
+  document.querySelectorAll('.option-label input[type="radio"]').forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      var name = this.name;
+      document.querySelectorAll('input[name="' + CSS.escape(name) + '"]').forEach(function(r) {
+        r.closest('.option-label').classList.remove('checked');
+      });
+      this.closest('.option-label').classList.add('checked');
+    });
+  });
+
+  // --- SCALE HIGHLIGHTING ---
+  document.querySelectorAll('.scale-label input[type="radio"]').forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      var name = this.name;
+      document.querySelectorAll('input[name="' + CSS.escape(name) + '"]').forEach(function(r) {
+        r.closest('.scale-label').classList.remove('checked');
+      });
+      this.closest('.scale-label').classList.add('checked');
+    });
+  });
+
+  // --- CONDITIONAL EQUIPMENT FIELD ---
+  var locationRadios = document.querySelectorAll('input[name="Training location"]');
+  locationRadios.forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      var val = this.value;
+      var homeField = document.getElementById('equipmentField');
+      var gymField = document.getElementById('equipmentField-gym');
+      if (val === 'Home' || val === 'Both') {
+        homeField.classList.add('visible');
+        gymField.style.display = 'none';
+      } else if (val === 'Gym') {
+        homeField.classList.remove('visible');
+        gymField.style.display = 'block';
+      } else {
+        homeField.classList.remove('visible');
+        gymField.style.display = 'none';
+      }
+    });
+  });
+
+  // --- PROGRESS STRIP HIGHLIGHTING ---
+  var sections = document.querySelectorAll('[data-section]');
+  var progressItems = document.querySelectorAll('.progress-item');
+  function updateProgress() {
+    var scrollY = window.scrollY + 140;
+    var active = 1;
+    sections.forEach(function(sec) {
+      if (sec.getBoundingClientRect().top + window.scrollY <= scrollY) {
+        active = parseInt(sec.dataset.section);
+      }
+    });
+    progressItems.forEach(function(item, i) {
+      item.classList.toggle('active', i + 1 === active);
+    });
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+
+  // --- FORM SUBMISSION ---
+  var form = document.getElementById('intakeForm');
+  var submitBtn = document.getElementById('submitBtn');
+  var thankYou = document.getElementById('thankYou');
+  var errorBanner = document.getElementById('formErrorBanner');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Basic required field check
+    var requiredFields = form.querySelectorAll('[required]');
+    var valid = true;
+    requiredFields.forEach(function(field) {
+      if (field.type === 'radio' || field.type === 'checkbox') {
+        var group = form.querySelectorAll('[name="' + CSS.escape(field.name) + '"]');
+        var checked = false;
+        group.forEach(function(f) { if (f.checked) checked = true; });
+        if (!checked) valid = false;
+      } else if (!field.value.trim()) {
+        valid = false;
+        field.style.borderColor = 'var(--error)';
+        field.addEventListener('input', function() {
+          this.style.borderColor = '';
+        }, { once: true });
+      }
+    });
+
+    if (!valid) {
+      errorBanner.style.display = 'block';
+      errorBanner.textContent = 'Please fill in all required fields (marked with *) before submitting.';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    // Check Formspree ID has been set
+    if (FORMSPREE_ENDPOINT.indexOf('FORMSPREE_ID') !== -1) {
+      // Fallback: open mailto if Formspree not configured
+      var formData = new FormData(form);
+      var body = [];
+      formData.forEach(function(val, key) {
+        body.push(key + ':\n' + val);
+      });
+      window.location.href = 'mailto:fitbodiesbymk@gmail.com'
+        + '?subject=' + encodeURIComponent('Founding Client Questionnaire — ' + (formData.get('Full name') || 'New client'))
+        + '&body=' + encodeURIComponent(body.join('\n\n---\n\n'));
+      return;
+    }
+
+    // Submit via Formspree
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    errorBanner.style.display = 'none';
+
+    var data = new FormData(form);
+    fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function(res) {
+      if (res.ok) {
+        form.style.display = 'none';
+        thankYou.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        return res.json().then(function(d) { throw new Error(d.error || 'Submission failed'); });
+      }
+    })
+    .catch(function() {
+      errorBanner.style.display = 'block';
+      errorBanner.innerHTML = 'Something went wrong. Please try again, or email MK at <a href="mailto:fitbodiesbymk@gmail.com">fitbodiesbymk@gmail.com</a>.';
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg> Let\'s get started';
+    });
+  });
+</script>
+
+</body>
+</html>
