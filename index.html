@@ -29,14 +29,17 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
+        "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
         "@id": "https://fitbodiesbymk.com/#business",
         "name": "Fitbodies by MK",
         "url": "https://fitbodiesbymk.com",
-        "description": "Personal training and nutrition coaching based in Doha, Qatar. Strength training, body transformation, and sustainable results for every goal.",
+        "description": "Personal training and nutrition coaching based in Doha, Qatar. 1-on-1 online fitness coaching worldwide. Strength training, body transformation, and sustainable results.",
+        "image": "https://fitbodiesbymk.com/fitbodiesbymk.jpeg",
+        "email": "fitbodiesbymk@gmail.com",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Doha",
+          "addressRegion": "Doha",
           "addressCountry": "QA"
         },
         "geo": {
@@ -50,19 +53,68 @@
         ],
         "openingHours": "Mo-Su 06:00-21:00",
         "priceRange": "$$",
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "Qatar"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Worldwide"
+          }
+        ],
         "serviceArea": {
           "@type": "GeoCircle",
-          "description": "Worldwide online coaching, in-person in Doha, Qatar"
+          "description": "Worldwide online coaching, in-person personal training in Doha, Qatar"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Fitness Coaching Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Online Fitness Coaching",
+                "description": "1-on-1 online personal training and nutrition coaching delivered via WhatsApp. Available worldwide."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Personal Training in Doha",
+                "description": "In-person 1-on-1 personal training sessions in Doha, Qatar."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Come Back Strong",
+                "description": "12-week self-guided home strength programme with dumbbells. Instant PDF download."
+              }
+            }
+          ]
         }
       },
       {
         "@type": "Person",
         "@id": "https://fitbodiesbymk.com/#mk",
         "name": "MK",
-        "jobTitle": "Personal Fitness Coach",
+        "jobTitle": "Personal Trainer & Online Fitness Coach",
         "worksFor": { "@id": "https://fitbodiesbymk.com/#business" },
         "url": "https://fitbodiesbymk.com",
         "sameAs": ["https://www.instagram.com/fitbodies_by_mk/"],
+        "knowsAbout": [
+          "strength training",
+          "nutrition coaching",
+          "online fitness coaching",
+          "personal training",
+          "body transformation",
+          "functional fitness",
+          "women's fitness over 40"
+        ],
         "hasCredential": [
           {
             "@type": "EducationalOccupationalCredential",
@@ -73,8 +125,86 @@
             "@type": "EducationalOccupationalCredential",
             "name": "Certified Functional Strength Coach (CFSC)",
             "credentialCategory": "certification"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Certified Online Trainer (Online Trainer Academy)",
+            "credentialCategory": "certification"
           }
         ]
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need to be in Doha to work with you?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not at all. Online Fitness Coaching is remote — I work with clients from the UK, USA, Australia, and across the Middle East. Come Back Strong is a self-guided PDF programme you can do from anywhere. Personal Training is in-person in Doha only."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I'm over 40 and haven't trained in years. Is this right for me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely — this is exactly who I built Come Back Strong for. The programme starts where you are now, not where you think you should be. It's progressive, injury-aware, 40–45 minutes a session, two or three times a week — built around a real schedule."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do PN1 and CFSC certifications mean in practice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PN1 (Precision Nutrition Level 1) means my nutrition coaching is evidence-based and behaviour-focused — not just macros on a spreadsheet. CFSC (Certified Functional Strength Coach) is the Michael Boyle/MBSC methodology — widely regarded as the gold standard for functional strength training."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do check-ins and communication work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 1-on-1 coaching, everything runs through WhatsApp — weekly check-ins, direct access to me, no third-party apps. Come Back Strong is self-guided: no check-ins, you follow the programme at your own pace with video demos and a built-in logbook."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a gym, or can I train at home?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Come Back Strong is built for home training with dumbbells — that's all you need. For 1-on-1 coaching, it's flexible: gym, home, or both. I'll ask about your setup and build the programme around what you actually have."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long before I see results?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most clients notice improved energy and movement quality within 3–4 weeks. Visible body composition changes typically show at 6–8 weeks with consistent training and nutrition. Long-term transformation happens over months — and the goal is always sustainable change, not quick fixes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does the nutrition coaching actually look like?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Based on Precision Nutrition's behaviour-change model — we focus on habits and sustainable eating patterns rather than rigid meal plans. I'll help you understand what to eat, how much, and why, in a way that fits your real life."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get started?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depends which programme. For Come Back Strong, go straight to the Programmes section and grab the PDF — instant download, start today. For 1-on-1 coaching, fill in the short application or send me a WhatsApp message. Tell me your main goal and where you're starting from, and I'll reply personally."
+        }
       }
     ]
   }
@@ -580,7 +710,7 @@
       </div>
     </div>
     <div class="hero-img-wrap">
-      <img src="gym-image.jpg" alt="Fitbodies by MK — coaching session" style="object-position:center;" />
+      <img src="gym-image.jpg" alt="Personal training session in Doha, Qatar — Fitbodies by MK" style="object-position:center;" />
     </div>
   </div>
 </div>
@@ -853,7 +983,7 @@
   <div class="section-inner">
     <div class="about-grid">
       <div class="about-img">
-        <img src="potrait-of-mk.jpg" alt="MK — Fitbodies by MK" />
+        <img src="potrait-of-mk.jpg" alt="MK — certified personal trainer and online fitness coach based in Doha, Qatar" />
       </div>
       <div class="about-content">
         <p class="section-label" style="color:var(--blue);">About MK</p>

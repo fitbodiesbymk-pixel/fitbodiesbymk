@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /intake.html
+Disallow: /welcome.html
+
+Sitemap: https://fitbodiesbymk.com/sitemap.xml
